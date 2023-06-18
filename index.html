@@ -3,22 +3,63 @@
 <head>
   <title>Campus Cash - Plataforma de Asesoramiento Financiero</title>
   <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <div class="row">
+      <div class="row align-items-center">
         <div class="col">
-          <h1 class="display-4">Campus Cash</h1>
+          <h1 class="header-title">Campus Cash</h1>
         </div>
         <nav class="col">
           <ul class="nav">
-            <li class="nav-item"><a class="nav-link" href="#">Plataforma</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Recursos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Compañía</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Canales de Atención</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="platformDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Plataforma
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="platformDropdown">
+                <li><a class="dropdown-item" href="#">Misión y Visión</a></li>
+                <li><a class="dropdown-item" href="#">Conócenos</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="resourcesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Recursos
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
+                <a href="asesoria_personalizada.html" class="dropdown-item">Asesoría Personalizada</a>
+
+                <li><a class="dropdown-item" href="plan_de_ahorros.html">Plan de Ahorros</a></li>
+                <li><a class="dropdown-item" href="#">Bibliografía</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="channelsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Canales de Atención
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="channelsDropdown">
+                <li><a class="dropdown-item" href="#">Preguntas Frecuentes</a></li>
+                <li><a class="dropdown-item" href="#">Enviar Solicitud</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="forumDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Foro
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="forumDropdown">
+                <li><a class="dropdown-item" href="#">Foro de inversión</a></li>
+                <li><a class="dropdown-item" href="#">Foro de ahorros</a></li>
+              </ul>
+            </li>
           </ul>
         </nav>
+        <div class="col-auto">
+          <a class="nav-link" href="#">
+            <i class="fas fa-user"></i>
+            Usuario
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -72,6 +113,19 @@
                 <p class="card-text">Únete a una comunidad de más de 10,000 estudiantes que han mejorado su salud financiera.</p>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5">
+        <div class="col-md-6">
+          <img src="especial.jpg" alt="Imagen 3" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+          <div class="description">
+            <h3>Los mejores planes y métodos para mantener tus finanzas en orden</h3>
+            <p>Asesoramiento continuo guiado por especialistas en el sector.</p>
+            <a href="#" class="btn btn-primary">Empieza Ya</a>
           </div>
         </div>
       </div>
