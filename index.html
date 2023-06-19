@@ -29,7 +29,6 @@
               </a>
               <ul class="dropdown-menu" aria-labelledby="resourcesDropdown">
                 <a href="asesoria_personalizada.html" class="dropdown-item">Asesoría Personalizada</a>
-
                 <li><a class="dropdown-item" href="plan_de_ahorros.html">Plan de Ahorros</a></li>
                 <li><a class="dropdown-item" href="#">Bibliografía</a></li>
               </ul>
@@ -55,10 +54,16 @@
           </ul>
         </nav>
         <div class="col-auto">
-          <a class="nav-link" href="#">
-            <i class="fas fa-user"></i>
-            Usuario
-          </a>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user"></i>
+              Usuario
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="userDropdown">
+              <li><a class="dropdown-item" href="login.html">Iniciar sesión</a></li>
+              <li><a class="dropdown-item" href="registro.html">Registrarse</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -77,7 +82,7 @@
             <img src="inversion.jpg" alt="Imagen 2" class="img-fluid">
           </div>
         </div>
-        <a href="#" class="btn btn-primary mt-4">Regístrate ahora</a>
+        <a href="registro.html" class="btn btn-primary mt-4">Regístrate ahora</a>
       </div>
       
       <div class="features mt-5">
