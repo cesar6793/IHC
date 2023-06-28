@@ -143,6 +143,18 @@
       </div>
     </div>
   </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Verificar si es la primera vez que se carga la página
+      if (!localStorage.getItem("firstLoad")) {
+        // Limpiar el LocalStorage
+        localStorage.clear();
+  
+        // Marcar la carga inicial
+        localStorage.setItem("firstLoad", true);
+      }
+    });
+  </script>
   
   <footer class="bg-dark text-white text-center py-3">
     <div class="container">

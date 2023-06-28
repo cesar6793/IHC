@@ -5,6 +5,7 @@
   <link rel="stylesheet" type="text/css" href="./bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0"></script>
+  
   <style>
     canvas {
       max-width: 100%;
@@ -72,24 +73,23 @@
             <ul class="list-group">
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Nombre:
-                <span class="badge bg-secondary">John Doe</span>
+                <span class="nombre" id="nombreBadge"></span>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
-                Edad:
-                <span class="badge bg-secondary">25</span>
+                Universidad:
+                <span class="badge bg-secondary" id="universidadBadge"></span>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Email:
-                <span class="badge bg-secondary">john.doe@example.com</span>
+                <span class="badge bg-secondary" id="emailBadge"></span>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center">
                 Dirección:
-                <span class="badge bg-secondary">Calle Principal #123</span>
+                <span class="badge bg-secondary" id="direccionBadge"></span>
               </li>
             </ul>
           </div>
         </div>
-      </div>
       
       <div class="section">
         <h3 class="section-title">Plan de Ahorro</h3>
@@ -129,6 +129,18 @@
   </footer>
 
   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Obtener el primer usuario almacenado en el LocalStorage
+      var users = JSON.parse(localStorage.getItem("users"));
+      var user = users[0];
+
+      // Mostrar los atributos del usuario en la página
+      document.getElementById("nombreBadge").textContent = user.name;
+      document.getElementById("universidadBadge").textContent = user.university;
+      document.getElementById("emailBadge").textContent = user.email;
+      document.getElementById("direccionBadge").textContent = user.address;
+    });
+ 
     // Datos para el gráfico de barras (gastos e ingresos mensuales)
     const monthlyData = {
       labels: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
@@ -187,6 +199,7 @@
     // Crear el diagrama de pastel
     const savingsChart = new Chart(document.getElementById('savingsChart'), savingsConfig);
   </script>
+  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/js/bootstrap.bundle.min.js"></script>
 </body>
